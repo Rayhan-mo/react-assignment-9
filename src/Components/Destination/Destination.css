@@ -1,0 +1,55 @@
+h3{
+    color: rgb(139, 139, 139);
+}
+
+h2{
+    text-align: center;
+    padding-top: 40px;
+    color: rgb(114, 114, 114);
+}
+.bookingButton{
+    background-color: rgb(221, 221, 221);
+    border: none;
+    width: 120px;
+    height: 22px;
+    border-radius: 5px;
+    margin-left: 13vh;
+    cursor: pointer;
+}
+.bookingButton:hover{
+    background-color: rgb(237, 211, 255);
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.image{
+    width: 220px;
+    height: 280px;
+    margin: 10px;
+    border-radius: 12px;
+}
+.style{
+    margin-top:200px;
+    margin-left: 700px;
+}
+.booking-form-box{
+    margin-top:50px;
+    margin-left: 200px;
+}
+.label{
+    color: rgb(117, 117, 117);
+
+}
+.booking{
+  width: 300px;
+  margin-left:45px
+}
+button{
+    margin: 20px;
+}
+.orgin{
+    
+}

@@ -1,0 +1,50 @@
+.logo img{
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    color:white;
+}
+  
+.Navbar{
+    text-align:center;
+}
+.Navbar nav {
+    list-style: height 10px;
+    font-size: 17px;
+    margin-left: 2.5rem;
+    margin-right: 2rem;
+}
+nav a{
+    color: rgb(255, 255, 255);
+    margin-right: 14px;
+    padding: 3px;
+    float: right;
+    transition:0.6s all;
+    margin-top: 15px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: rgb(253, 243, 249);
+    color: black;
+    border-radius: 3px;
+}
+ .search{
+    float: left;
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+input[type="text"]{
+    width: 200px;
+    padding: 2px;
+    font-size:16px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius:10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+ 
+}

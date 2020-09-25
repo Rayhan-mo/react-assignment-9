@@ -1,0 +1,16 @@
+.detail-container{
+    margin: 10px;
+}
+.room img{
+    width: auto;
+    height: 150px;
+    margin-right:10px ;
+}
+.room{
+    display: flex;
+    margin-bottom: 10px;
+}
+.room-details{
+line-height: 8px;
+font-size: small;
+}

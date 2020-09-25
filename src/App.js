@@ -1,26 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { createContext, useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import Contact from './Components/Contact/Contact';
+import Destination from './Components/Destination/Destination';
+import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from './Components/Login/Login';
+import NotMatch from './Components/NotMatch/NotMatch';
+import News from './Components/News/News';
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+import { useScrollTrigger } from '@material-ui/core';
+import Coxbazar from './Components/Coxbazar/Coxbazar';
+import Sreemangal from './Components/Sreemangal/Sreemangal';
+import Sundarban from './Components/Sundorban/Sundarban';
+import HotelDetail from './Components/HotelDetail/HotelDetail';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+
+
+
+export const UserContext = createContext();
+
+function App(props) {
+  const [signedInUser, setSignedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+      <UserContext.Provider value={[signedInUser, setSignedInUser]}>
+    
+      <Router>
+        <Navbar></Navbar>
+        <Switch>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/login">
+             <Login></Login>
+            </Route>
+            <Route path="/destination">
+              <Destination></Destination>
+            </Route>
+            <Route path="/News">
+                 <News></News>
+            </Route>
+            <Route path="/src/Components/Coxbazar/Coxbazar.js">
+                <Coxbazar></Coxbazar>
+            </Route>
+            <Route path="/src/Components/Sreemangal/Sreemangal.js">
+                <Sreemangal></Sreemangal>
+            </Route>
+            <Route path="/src/Components/Sundorban/Sundarban.js">
+                <Sundarban></Sundarban>
+            </Route>
+            <PrivateRoute path="/HotelDetail">
+              <HotelDetail></HotelDetail>
+            </PrivateRoute>
+            <Route exact path="/">
+              <Destination></Destination>
+            </Route>
+            <Route  path="*">
+              <NotMatch></NotMatch>
+            </Route>
+        </Switch>
+    </Router>
+    </UserContext.Provider>
+ 
   );
-}
+};
 
 export default App;
